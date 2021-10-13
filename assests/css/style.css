@@ -1,15 +1,47 @@
 body {
     font-family: 'Quicksand', sans-serif;
+    background-color: white;
 }
 
 #logo-container {
-    height: 10%;
-
+    width: 100%;
+    
 }
+
 
 .logo {
    margin: auto;
    text-align: center;
-   
+   padding: 10px;
+  
 }
+
+.logo img {
+    width: 210px;
+    height: 120px;
+}
+
+#game-container {
+    border: solid 2px black;
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+
+.image-container {
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    
+}
+
+.image-container img {
+    width: 160px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+
 
