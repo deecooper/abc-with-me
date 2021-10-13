@@ -3,7 +3,7 @@ body {
     background-color: white;
 }
 
-#logo-container {
+#header-container {
     width: 100%;
     
 }
@@ -21,6 +21,15 @@ body {
     height: 120px;
 }
 
+#instructions {
+    float: right;
+    font-size: 70px;
+    background-color: #76c273;
+    color: white;
+}
+
+
+
 #game-container {
     border: solid 2px black;
     width: 80%;
@@ -36,12 +45,27 @@ body {
 }
 
 .image-container img {
-    width: 160px;
-    height: 200px;
+    width: 130px;
+    height: 160px;
     margin: auto;
     display: block;
     text-align: center;
 }
 
+#button-container {
+    padding: 5%;
+}
 
+#alphabet-container {
+    padding-right: 5%; 
+    padding-left: 5%;
+    text-align: center;
+}
+
+.alphabet {
+    padding: 10px;
+    font-size: 50px;
+    margin: 5px;
+    width: 8%;
+}
 
