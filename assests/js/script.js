@@ -2,13 +2,13 @@ let currentLetter;
 //antonio//
 //an array with an object inside with the illsutrations and audio//
 let illustrations = [
-    {"image": "apple.png", "sound":"a-is-for.mp3"},
-    {"image": "boat.png", "sound":"b-is-for.mp3"},
-    {"image": "car.png", "sound":"c-is-for.mp3"},
-    {"image": "dog.png", "sound":"d-is-for.mp3"},
-    {"image": "elephant.png", "sound":"e-is-for.mp3"},
-    {"image": "fireman.png", "sound":"f-is-for.mp3"},
-    {"image": "girl.png", "sound":"g-is-for.mp3"},
+    {'image': "apple.png", 'sound':'a-is-for.mp3'},
+    {'image': "boat.png", 'sound':'b-is-for.mp3'},
+    {'image': "car.png", 'sound':'c-is-for.mp3'},
+    {'image': "dog.png", 'sound':'d-is-for.mp3'},
+    {'image': "elephant.png", 'sound':'e-is-for.mp3'},
+    {'image': "fireman.png", 'sound':'f-is-for.mp3'},
+    {'image': "girl.png", 'sound':'g-is-for.mp3'},
 
 ];
 
@@ -22,7 +22,7 @@ function chooseIllustration() {
 }
 
 function playAudio(audioUrl) {
-    let Audio = new Audio(audioUrl);
+    let audio = new Audio(audioUrl);
     audio.play();
     return true;
 }
@@ -37,13 +37,13 @@ function playAudio(audioUrl) {
 // code institute love maths//
 document.addEventListener("DOMContentLoaded", function() {
     let instructionsButton = document.getElementById("instructions");
-    let soundButton = document.getElementById("sound");
+    let audioButton = document.getElementById("sound");
     instructionsButton.addEventListener("click", function(){
         playAudio('/assests/audio/instructions.mp3');
     });
 
-    soundButton.addEventListener("click", function(){
-        playAudio('/assests/audio' + currentLetter["sound"]);
+    audioButton.addEventListener("click", function(){
+        playAudio('/assests/audio/' + currentLetter["sound"]);
 
     })
 
