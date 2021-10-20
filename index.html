@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
@@ -13,11 +15,19 @@
 <body>
     <header id = "header-container">
         <div class="logo"><img src="assests/images/logo-abc-with-me.png" alt="logo for abc with me"></div></div>
-      <button id="instructions" aria-label="instructions for game">?</button>
+        <!--stackoverflowhttps://stackoverflow.com/questions/18826147/javascript-audio-play-on-click-->
+       
+        <button id="instructions" value="PLAY" onclick="play()"> ? 
+            <audio id="audio" src="assests/audio/instructions.mp3"></audio></button>
+        
+    
        </header>
     
     <div id= "game-container">
-        <div class="image-container"><img src="assests/images/illustrations/apple.png"></div>
+        <button id = "sound"><i class="fas fa-play"></i>
+
+        </button>
+        <div class="image-container"><img src="assests/images/illustrations" id="alphabet-illustration"></div>
         
         <div id ="alphabet-container">
             <button class="alphabet"> A </button>
@@ -31,21 +41,7 @@
             <button class="alphabet"> I </button>
             <button class="alphabet"> J </button>
             <button class="alphabet"> K </button>
-            <button class="alphabet"> L </button>
-            <button class="alphabet"> M </button>
-            <button class="alphabet"> N </button>
-            <button class="alphabet"> O </button>
-            <button class="alphabet"> P </button>
-            <button class="alphabet"> Q </button>
-            <button class="alphabet"> R </button>
-            <button class="alphabet"> S </button>
-            <button class="alphabet"> T </button>
-            <button class="alphabet"> U </button>
-            <button class="alphabet"> V </button>
-            <button class="alphabet"> W </button>
-            <button class="alphabet"> X </button>
-            <button class="alphabet"> Y </button>
-            <button class="alphabet"> Z </button>
+            
             
             
             </div>

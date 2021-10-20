@@ -36,6 +36,15 @@ body {
     
 }
 
+#sound {
+    background-color: #76c273;
+    color: white;
+    width: 8%;
+    font-size: 40px;
+    margin: 2%;
+    display: inline-block;
+}
+
 
 
 #game-container {
