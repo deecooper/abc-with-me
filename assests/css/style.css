@@ -56,14 +56,14 @@ body {
 }
 
 .image-container {
-    width: 50%;
+    
     margin: auto;
     padding: 30px;
     
 }
 
 .image-container img {
-    width: 130px;
+    
     height: 160px;
     margin: auto;
     display: block;

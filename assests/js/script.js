@@ -1,12 +1,30 @@
-//https://www.peachpit.com/articles/article.aspx?p=2239154&seqNum=10//
+let currentLetter;
+//antonio//
+//an array with an object inside with the illsutrations and audio//
+let illustrations = [
+    {"image": "apple.png", "sound":"a-is-for.mp3"},
+    {"image": "boat.png", "sound":"b-is-for.mp3"},
+    {"image": "car.png", "sound":"c-is-for.mp3"},
+    {"image": "dog.png", "sound":"d-is-for.mp3"},
+    {"image": "elephant.png", "sound":"e-is-for.mp3"},
+    {"image": "fireman.png", "sound":"f-is-for.mp3"},
+    {"image": "girl.png", "sound":"g-is-for.mp3"},
 
-window.onload = chooseIllustration;
+];
 
-let illustrations = ["../images/illustrations/apple.png", "images/illustrations/boat.png", "images/illustrations/car.png"];
 
 function chooseIllustration() {
-     let randomNum = Math.floor(Math.random() * illustrations.length);
-     document.getElementById("alphabet-illustration").src = illustrations[randomNum];
+    //choosing the random illustration to show up on screen//
+    let randomNum = Math.floor(Math.random() * illustrations.length);
+    document.getElementById("alphabet-illustration").src = '/assests/images/illustrations/' + illustrations[randomNum]['image'];
+    currentLetter = illustrations[randomNum];
+
+}
+
+function playAudio(audioUrl) {
+    let Audio = new Audio(audioUrl);
+    audio.play();
+    return true;
 }
 
 
@@ -14,23 +32,27 @@ function chooseIllustration() {
 
 
 
-document.addEventListener("DOMContentLoaded", function(){
-    
-        
-    let buttons = document.getElementsByTagName("button");
 
-    for(let button of buttons) {
-        button.addEventListener("click", function(){
-            if(this.getAttribute("data-type") === "instruction") {
-                alert("you click instructions");
-            } else {
-                alert("you clicked a button")
-            }
-        })
-    }
 
+// code institute love maths//
+document.addEventListener("DOMContentLoaded", function() {
+    let instructionsButton = document.getElementById("instructions");
+    let soundButton = document.getElementById("sound");
+    instructionsButton.addEventListener("click", function(){
+        playAudio('/assests/audio/instructions.mp3');
+    });
+
+    soundButton.addEventListener("click", function(){
+        playAudio('/assests/audio' + currentLetter["sound"]);
+
+    })
+
+    chooseIllustration();
 
 })
+
+
+
 
 function runGame() {
     let audio = document.getElementById("audio");
@@ -38,11 +60,4 @@ function runGame() {
 
 }
 
-function displayQuestion() {
 
-}
-
-function checkAnswer() {
-
-
-}
