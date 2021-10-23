@@ -14,6 +14,8 @@ let illustrations = [
     {'image': "icecream.png", 'sound':'i-is-for.mp3'},
     {'image': "juice.png", 'sound':'j-is-for.mp3'},
     {'image': "kite.png", 'sound':'k-is-for.mp3'},
+    {'image': "leaf.png", 'sound':'l-is-for.mp3'},
+    {'image': "monkey.png", 'sound':'m-is-for.mp3'},
 
 
 ];

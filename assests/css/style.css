@@ -38,16 +38,7 @@ body {
 
 
 
-#sound {
-    background-color: #76c273;
-    color: white;
-    width: 7%;
-    font-size: 50px;
-    margin: 2%;
-    display: inline-block;
-    border-radius: 8px;
 
-}
 
 
 
@@ -59,8 +50,19 @@ body {
     background-color: whitesmoke;
 }
 
+#sound {
+    background-color: #76c273;
+    color: white;
+    width: 7%;
+    font-size: 50px;
+    margin: 2%;
+    display: inline-block;
+    border-radius: 8px;
+
+}
+
 #score {
-    font-size: 40px;
+    font-size: 50px;
     border-radius: 8px;
     background-color: #76c273;
     color: #ffff;
@@ -146,40 +148,67 @@ body {
 }
 
 #f-btn {
-    background-color: #fffa71;
-    border-color: #f1e911;
+    
+    background-color: white;
+    border-color: #ff000d;
+    color: #ff000d;
 
 }
 
 #g-btn {
-    background-color: #ffbbe7;
+    
     border-color: #d681b5;
+    color: #d681b5;
+    background-color: white;
 
 }
 
 #h-btn {
-    background-color: #a6d38b;
+    background-color: white;
     border-color: #76c273;
+    color: #76c273;
+    
 
 }
 
 #i-btn {
-    background-color: #80e1ff;
+    background-color: white;
+    color: #00adef;
     border-color: #00adef;
 
 }
 
 #j-btn {
-    background-color: #decee5;
+    background-color: white;
     border-color: #65448b;
+    color: #65448b;
 
 }
 
 #k-btn {
-    background-color: #ff5f67;
-    border-color: #e62526;
+    background-color: white;
+    border-color: #ff000d;
+    color: #ff000d;
 
 }
+#l-btn {
+    background-color: white;
+    border-color: #399106;
+    color: #399106;
+
+
+}
+
+#m-btn {
+    background-color: white;
+    border-color: #bd841c;
+    color: #bd841c;;
+
+
+}
+
+
+
 
 
 
