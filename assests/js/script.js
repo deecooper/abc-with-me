@@ -27,13 +27,16 @@ function chooseIllustration() {
     let randomNum = Math.floor(Math.random() * illustrations.length);
     document.getElementById("alphabet-illustration").src = '/assests/images/illustrations/' + illustrations[randomNum]['image'];
     currentLetter = illustrations[randomNum];
+    console.log(illustrations);
 
-    if(!usedIllustrations.includes(illustrations)) {
+   /* if(!usedIllustrations.includes(illustrations)) {
         console.log(illustrations);
         illustrations.push(usedIllustrations);
     } else {
         chooseIllustration();
-    }
+    }*/
+
+
 
 }
 
@@ -54,6 +57,9 @@ function playAudio(audioUrl) {
 document.addEventListener("DOMContentLoaded", function() {
     let instructionsButton = document.getElementById("instructions");
     let audioButton = document.getElementById("sound");
+    
+    //return all the buttons from class alphabet
+    let buttonList = document.querySelectorAll('button.alphabet');
     instructionsButton.addEventListener("click", function(){
         playAudio('/assests/audio/instructions.mp3');
     });
@@ -62,6 +68,10 @@ document.addEventListener("DOMContentLoaded", function() {
         playAudio('/assests/audio/' + currentLetter["sound"]);
 
     })
+
+    buttonList.forEach(function(button) {
+        button.addEventListener("click", chooseBtn);
+    });
 
     chooseIllustration();
 
@@ -77,6 +87,15 @@ function runGame() {
 }
 
 function chooseBtn() {
+    let currentOption = this.innerText.toUpperCase()
+    if (currentLetter['answer'].toUpperCase().includes(currentOption)){
+        playAudio('assests/audio/right-ans.mp3');
+        alert("right ans");
+        chooseIllustration();
+    } else {
+        playAudio('assests/audio/wrong-ans.mp3');
+        alert("wrong ans")
+    }
     
 }
 
