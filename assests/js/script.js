@@ -1,40 +1,41 @@
 let currentLetter;
+let score = 0;
 
 //antonio//
 //an array with an object inside with the illsutrations and audio//
 let illustrations = [
-    {'image': "apple.png", 'sound':'a-is-for.mp3'},
-    {'image': "boat.png", 'sound':'b-is-for.mp3'},
-    {'image': "car.png", 'sound':'c-is-for.mp3'},
-    {'image': "dog.png", 'sound':'d-is-for.mp3'},
-    {'image': "elephant.png", 'sound':'e-is-for.mp3'},
-    {'image': "fireman.png", 'sound':'f-is-for.mp3'},
-    {'image': "girl.png", 'sound':'g-is-for.mp3'},
-    {'image': "house.png", 'sound':'h-is-for.mp3'},
-    {'image': "icecream.png", 'sound':'i-is-for.mp3'},
-    {'image': "juice.png", 'sound':'j-is-for.mp3'},
-    {'image': "kite.png", 'sound':'k-is-for.mp3'},
-    {'image': "leaf.png", 'sound':'l-is-for.mp3'},
-    {'image': "monkey.png", 'sound':'m-is-for.mp3'},
+    {'image': "apple.png", 'sound':'a-is-for.mp3', 'answer': 'a'},
+    {'image': "boat.png", 'sound':'b-is-for.mp3', 'answer': 'b'},
+    {'image': "car.png", 'sound':'c-is-for.mp3', 'answer': 'c'},
+    {'image': "dog.png", 'sound':'d-is-for.mp3', 'answer': 'd'},
+    {'image': "elephant.png", 'sound':'e-is-for.mp3', 'answer': 'e'},
+    {'image': "fireman.png", 'sound':'f-is-for.mp3', 'answer': 'f'},
+    {'image': "girl.png", 'sound':'g-is-for.mp3', 'answer': 'g'},
+    {'image': "house.png", 'sound':'h-is-for.mp3', 'answer': 'h'},
+    {'image': "icecream.png", 'sound':'i-is-for.mp3', 'answer': 'i'},
+    {'image': "juice.png", 'sound':'j-is-for.mp3', 'answer': 'j'},
+    {'image': "kite.png", 'sound':'k-is-for.mp3', 'answer': 'k'},
+    {'image': "leaf.png", 'sound':'l-is-for.mp3', 'answer': 'l'},
+    {'image': "monkey.png", 'sound':'m-is-for.mp3', 'answer': 'm'},
 
 
 ];
 //post on slack so the questions dont repeat themselves kotaro (Toto) Tanaka
-let usedIllustrations = [];
+
 
 function chooseIllustration() {
     //choosing the random illustration to show up on screen//
-    let randomNum = Math.floor(Math.random() * illustrations.length);
+    let randomNum = Math.floor(Math.random() * (illustrations.length));
     document.getElementById("alphabet-illustration").src = '/assests/images/illustrations/' + illustrations[randomNum]['image'];
     currentLetter = illustrations[randomNum];
     console.log(illustrations);
 
-   /* if(!usedIllustrations.includes(illustrations)) {
-        console.log(illustrations);
-        illustrations.push(usedIllustrations);
-    } else {
-        chooseIllustration();
-    }*/
+   /// if(!usedIllustrations.includes(illustrations)) {
+    //    console.log(illustrations);
+     //   illustrations.push(usedIllustrations);
+ //   } else {
+ //       chooseIllustration();
+  //  }*/
 
 
 
@@ -87,14 +88,17 @@ function runGame() {
 }
 
 function chooseBtn() {
-    let currentOption = this.innerText.toUpperCase()
+    let currentOption = this.innerText.toUpperCase();
     if (currentLetter['answer'].toUpperCase().includes(currentOption)){
-        playAudio('assests/audio/right-ans.mp3');
-        alert("right ans");
+        
+        playAudio('assests/audio/right-ans.mp3')
+        score = score + 1;
+        document.getElementById('score').innerText = score;
         chooseIllustration();
     } else {
+        console.log(' Answer ' + currentOption + ' != Correct Answer ' + currentLetter['answer'].toUpperCase());
         playAudio('assests/audio/wrong-ans.mp3');
-        alert("wrong ans")
+        
     }
     
 }
