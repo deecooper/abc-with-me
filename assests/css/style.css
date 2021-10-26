@@ -43,12 +43,14 @@ body {
 
 
 #game-container {
-    border: solid 2px black;
+    
     width: 80%;
-    height: 550px;
+    height: 700px;
     margin: auto;
     background-color: whitesmoke;
 }
+
+
 
 #sound {
     background-color: #76c273;
@@ -77,16 +79,20 @@ body {
 .image-container {
     
     margin: auto;
+    height: 250px;
+    width: 400px;
+    background-color: white;
     
     
 }
 
 .image-container img {
     
-    height: 180px;
+    height: 220px;
     margin: auto;
     display: block;
     text-align: center;
+    padding-top: 20px;
 }
 
 #button-container {
@@ -95,8 +101,8 @@ body {
 }
 
 #alphabet-container {
-    padding-right: 5%; 
-    padding-left: 5%;
+    
+    padding: 5%;
     text-align: center;
 }
 
