@@ -139,9 +139,11 @@ let illustrations = [{
 function chooseIllustration(index) {
     
     //choosing the random illustration to show up on screen//
+    setTimeout (function(){
     document.getElementById("alphabet-illustration").src = '/assests/images/illustrations/' + illustrations[index]['image'];
     currentLetter = illustrations[index];
     console.log(illustrations);
+    }, 2000);
 
     /// if(!usedIllustrations.includes(illustrations)) {
     //    console.log(illustrations);
@@ -174,14 +176,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //return all the buttons from class alphabet used media query
     let buttonList = document.querySelectorAll('button.alphabet');
+
     instructionsButton.addEventListener("click", function () {
-        playAudio('/assests/audio/instructions.mp3');
+        let button = this;
+        button.disabled = true;
+        setTimeout(function(button) {
+            playAudio('/assests/audio/instructions.mp3');
+            button.disabled - false;
+
+        }, 2000);
+        
     });
 
     audioButton.addEventListener("click", function () {
-        playAudio('/assests/audio/' + currentLetter["sound"]);
+        let button = this;
+        button.disabled = true;
+        setTimeout(function(){
+            playAudio('/assests/audio/' + currentLetter["sound"]);
+            button.disabled = false;
+        }, 2000);
 
-    })
+    });
 
     buttonList.forEach(function (button) {
         button.addEventListener("click", chooseBtn);
@@ -259,7 +274,7 @@ function chooseBtn() {
 function isGameCompleted() {
     if (score === 20) {
         gameComplete = true;
-        alert("congradulations");
+        alert("congratulations");
 
         location.reload();
     }
