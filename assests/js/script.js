@@ -1,8 +1,9 @@
 let currentLetter;
 let score = 0;
+let gameComplete = false;
 
 //antonio//
-//an array with an object inside with the illsutrations and audio//
+//an array with an object inside with the illsutrations, audio and answer//
 let illustrations = [
     {'image': "a.png", 'sound':'a-is-for.mp3', 'answer': 'a'},
     {'image': "b.png", 'sound':'b-is-for.mp3', 'answer': 'b'},
@@ -24,6 +25,12 @@ let illustrations = [
     {'image': "r.png", 'sound':'r-is-for.mp3', 'answer': 'r'},
     {'image': "s.png", 'sound':'s-is-for.mp3', 'answer': 's'},
     {'image': "t.png", 'sound':'t-is-for.mp3', 'answer': 't'},
+    {'image': "u.png", 'sound':'u-is-for.mp3', 'answer': 'u'},
+    {'image': "v.png", 'sound':'v-is-for.mp3', 'answer': 'v'},
+    {'image': "w.png", 'sound':'w-is-for.mp3', 'answer': 'w'},
+    {'image': "x.png", 'sound':'x-is-for.mp3', 'answer': 'x'},
+    {'image': "y.png", 'sound':'t-is-for.mp3', 'answer': 'y'},
+
 
 
 ];
@@ -121,7 +128,7 @@ function timeOutBtns () {
 for(let i = 0;i < btns.length; i++){
     btns[i].addEventListener('click', function(){
         disableButtons(true);
-        setTimeout(function(){disableButtons(false);}, 600);
+        setTimeout(function(){disableButtons(false);}, 6000);
     });    
 }
 function disableButtons(state){
@@ -131,6 +138,15 @@ function disableButtons(state){
 
 }
 
+}
 
 
+function gameCompleted() {
+    if(score === 20) {
+        gameComplete = true;
+        alert(congradulations);
+    } else {
+        gameCompleted = false;
+        chooseIllustration();
+    }
 }
