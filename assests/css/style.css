@@ -1,7 +1,5 @@
 
 
-
-
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: white;
@@ -39,10 +37,6 @@ body {
     padding: 5px;
     
 }
-
-
-
-
 
 
 
@@ -323,6 +317,8 @@ body {
 
 }
 
+/* Game Finished page */
+
 #play-again-btn {
     color: #ffff;
     background-color: #76c273;
@@ -362,11 +358,13 @@ body {
 
 }
 
+/* Media Queries */
+
 @media screen and (max-width: 950px) {
 
     #game-container {
     
-        width: 80%;
+        
         height: 700px;
         margin: auto;
       
