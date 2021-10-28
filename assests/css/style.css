@@ -1,3 +1,7 @@
+
+
+
+
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: white;
@@ -6,9 +10,7 @@ body {
 #header-container {
     width: 100%;
     height: 140px;
-    
-
-    
+       
 }
 
 
@@ -27,13 +29,14 @@ body {
 
 #instructions {
     
-    font-size: 60px;
+    font-size: 50px;
     background-color: #76c273;
     color: white;
     width: 5%;
     float: right;
     border-radius: 8px;
     border: none;
+    padding: 5px;
     
 }
 
@@ -58,16 +61,17 @@ body {
     background-color: #76c273;
     color: white;
     width: 7%;
-    font-size: 50px;
+    font-size: 40px;
     margin: 2%;
     float: left;
     border-radius: 8px;
     border-width: 0;
+    padding: 5px;
 
 }
 
 #score {
-    font-size: 50px;
+    font-size: 40px;
     border-radius: 8px;
     background-color: #76c273;
     color: #ffff;
@@ -75,6 +79,7 @@ body {
     margin: 2%;
     width: 5%;
     text-align: center;
+    padding: 5px;
 
 
 }
@@ -353,6 +358,153 @@ body {
     padding-top: 2%;
     padding-bottom: 1%;
     
+
+
+}
+
+@media screen and (max-width: 950px) {
+
+    #game-container {
+    
+        width: 80%;
+        height: 700px;
+        margin: auto;
+      
+}
+
+
+#score {
+    font-size: 30px;
+    width: 8%;
+}
+
+#sound {
+    font-size: 30px;
+    width: 8%;
+}
+
+#instructions {
+    font-size: 40px;
+}
+
+
+.alphabet {
+
+    width: 10%;
+
+
+}    
+
+.image-container {
+    
+    margin: auto;
+    height: 250px;
+    width: 400px;
+    margin-top: 40px;
+
+}
+
+.image-container img {
+
+    height: 200px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+}
+
+@media screen and (max-width: 700px) {
+
+    #score {
+        font-size: 25px;
+        
+    }
+    
+    #sound {
+        font-size: 20px;
+    }
+    
+    #instructions {
+        font-size: 30px;
+    }
+
+
+    .alphabet {
+
+        width: 15%;
+        font-size: 20px;
+    
+    
+    }
+
+    #game-container {
+    
+        width: 80%;
+        height: 850px;
+        margin: auto;
+        
+      
+}
+
+.image-container {
+    
+    margin: auto;
+    height: 200px;
+    width: 350px;
+    margin-top: 60px;
+
+}
+
+.image-container img {
+
+    height: 150px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+    
+}
+
+@media screen and (max-width: 620px) {
+
+.image-container {
+    
+    margin: auto;
+    height: 200px;
+    width: 300px;
+    margin-top: 70px;
+
+}
+
+.alphabet {
+
+    width: 15%;
+    font-size: 20px;
+    padding: 20px;
+    margin: 10px;
+
+
+}
+
+
+#game-container {
+    
+    width: 80%;
+    height: 90px;
+    margin: auto;
+    
+  
+}
+
+
+
+
+
 
 
 }
