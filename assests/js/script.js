@@ -140,7 +140,7 @@ function chooseIllustration(index) {
     
     //choosing the random illustration to show up on screen//
     setTimeout(function(){
-    document.getElementById("alphabet-illustration").src = '/assests/images/illustrations/' + illustrations[index].image;
+    document.getElementById("alphabet-illustration").src = './assests/images/illustrations/' + illustrations[index].image;
     currentLetter = illustrations[index];
     console.log(illustrations);
     }, 2000);
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let button = this;
         button.disabled = true;
         setTimeout(function(button){
-            playAudio('/assests/audio/instructions.mp3');
+            playAudio('./assests/audio/instructions.mp3');
             button.disabled = false;
 
         }, 2000);
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let button = this;
         button.disabled = true;
         setTimeout(function(){
-            playAudio('/assests/audio/' + currentLetter.sound);
+            playAudio('./assests/audio/' + currentLetter.sound);
             button.disabled = false;
         }, 2000);
 
@@ -221,7 +221,7 @@ function chooseBtn() {
     let currentOption = this.innerText.toUpperCase();
     if (currentLetter.answer.toUpperCase().includes(currentOption)) {
         // remove current item from questions
-        playAudio('assests/audio/right-ans.mp3');
+        playAudio('./assests/audio/right-ans.mp3');
         score = score + 1;
         document.getElementById('score').innerText = score;
         
@@ -235,7 +235,7 @@ function chooseBtn() {
         chooseIllustration(randomNum);
     } else {
         console.log(' Answer ' + currentOption + ' != Correct Answer ' + currentLetter.answer.toUpperCase());
-        playAudio('assests/audio/wrong-ans.mp3');
+        playAudio('./assests/audio/wrong-ans.mp3');
 
     }
 
