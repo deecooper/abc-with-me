@@ -1,4 +1,11 @@
 
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
 
 body {
     font-family: 'Quicksand', sans-serif;
@@ -8,15 +15,17 @@ body {
 #header-container {
     width: 100%;
     height: 140px;
-       
+    display: flex;
+
 }
 
 
 #logo {
     text-align: center;
-   
-    
-  
+    width: 20%;
+    margin: auto;
+
+
 }
 
 #logo img {
@@ -25,23 +34,29 @@ body {
 
 }
 
+
+
 #instructions {
-    
+
     font-size: 50px;
     background-color: #76c273;
     color: white;
     width: 5%;
-    float: right;
+    height: 70px;
+
     border-radius: 8px;
     border: none;
-    padding: 5px;
-    
+    padding-left: 20px;
+    display: inline-flex;
+    text-align: center;
+    margin: 10px;
+
 }
 
 
 
 #game-container {
-    
+
     width: 80%;
     height: 600px;
     margin: auto;
@@ -79,7 +94,7 @@ body {
 }
 
 .image-container {
-    
+
     margin: auto;
     height: 300px;
     width: 450px;
@@ -87,12 +102,12 @@ body {
     display: inline-flex;
     text-align: center;
     margin-top: 30px;
-    
-    
+
+
 }
 
 .image-container img {
-    
+
     height: 250px;
     margin: auto;
     display: block;
@@ -102,11 +117,11 @@ body {
 
 #button-container {
     padding: 2%;
-    
+
 }
 
 #alphabet-container {
-    
+
     padding: 4%;
     text-align: center;
 }
@@ -138,7 +153,8 @@ body {
 #c-btn {
     background-color: #ffff;
     border-color: #f7931d;
-    color: #f7931d;;
+    color: #f7931d;
+    ;
 
 }
 
@@ -159,7 +175,7 @@ body {
 }
 
 #f-btn {
-    
+
     background-color: white;
     border-color: #ff000d;
     color: #ff000d;
@@ -167,7 +183,7 @@ body {
 }
 
 #g-btn {
-    
+
     border-color: #d681b5;
     color: #d681b5;
     background-color: white;
@@ -178,7 +194,7 @@ body {
     background-color: white;
     border-color: #76c273;
     color: #76c273;
-    
+
 
 }
 
@@ -202,6 +218,7 @@ body {
     color: #ff000d;
 
 }
+
 #l-btn {
     background-color: white;
     border-color: #399106;
@@ -213,7 +230,8 @@ body {
 #m-btn {
     background-color: white;
     border-color: #bd841c;
-    color: #bd841c;;
+    color: #bd841c;
+    ;
 
 
 }
@@ -330,7 +348,7 @@ body {
     margin-top: 50px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
-    
+
 
 }
 
@@ -353,7 +371,7 @@ body {
     color: #e62526;
     padding-top: 2%;
     padding-bottom: 1%;
-    
+
 
 
 }
@@ -363,53 +381,55 @@ body {
 @media screen and (max-width: 950px) {
 
     #game-container {
-    
-        
+
+
         height: 700px;
         margin: auto;
-      
-}
+
+    }
 
 
-#score {
-    font-size: 30px;
-    width: 8%;
-}
+    #score {
+        font-size: 30px;
+        width: 8%;
+    }
 
-#sound {
-    font-size: 30px;
-    width: 8%;
-}
+    #sound {
+        font-size: 30px;
+        width: 8%;
+    }
 
-#instructions {
-    font-size: 40px;
-}
-
-
-.alphabet {
-
-    width: 10%;
+    #instructions {
+        font-size: 40px;
+        height: 50px;
+        width: 7%;
+    }
 
 
-}    
+    .alphabet {
 
-.image-container {
-    
-    margin: auto;
-    height: 250px;
-    width: 400px;
-    margin-top: 40px;
+        width: 10%;
 
-}
 
-.image-container img {
+    }
 
-    height: 200px;
-    margin: auto;
-    display: block;
-    text-align: center;
-    padding-top: 20px;
-}
+    .image-container {
+
+        margin: auto;
+        height: 250px;
+        width: 400px;
+        margin-top: 40px;
+
+    }
+
+    .image-container img {
+
+        height: 200px;
+        margin: auto;
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+    }
 
 }
 
@@ -417,13 +437,13 @@ body {
 
     #score {
         font-size: 25px;
-        
+
     }
-    
+
     #sound {
         font-size: 25px;
     }
-    
+
     #instructions {
         font-size: 30px;
     }
@@ -434,119 +454,119 @@ body {
         width: 15%;
         font-size: 30px;
         margin: 10px;
-    
-    
+
+
     }
 
     #game-container {
-    
+
         width: 80%;
         height: 850px;
         margin: auto;
-        
-      
-}
-
-.image-container {
-    
-    margin: auto;
-    height: 200px;
-    width: 350px;
-    margin-top: 60px;
-
-}
-
-.image-container img {
-
-    height: 150px;
-    margin: auto;
-    display: block;
-    text-align: center;
-    padding-top: 20px;
-}
-
-#play-again-btn {
-    
-    font-size: 30px;
-    
- 
-
-}
-
-#balloons {
-    height: 300px;
-    background-color: white;
-    width: 40%;
-    margin: auto;
 
 
-}
+    }
 
-#balloons img {
-    height: 180px;
-    width: 130px;
-    padding-top: 50px;
-}
+    .image-container {
 
-#congratulations {
+        margin: auto;
+        height: 200px;
+        width: 350px;
+        margin-top: 60px;
 
-    font-size: 50px;
-    
+    }
+
+    .image-container img {
+
+        height: 150px;
+        margin: auto;
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #play-again-btn {
+
+        font-size: 30px;
 
 
-}
+
+    }
+
+    #balloons {
+        height: 300px;
+        background-color: white;
+        width: 40%;
+        margin: auto;
 
 
-    
+    }
+
+    #balloons img {
+        height: 180px;
+        width: 130px;
+        padding-top: 50px;
+    }
+
+    #congratulations {
+
+        font-size: 50px;
+
+
+
+    }
+
+
+
 }
 
 @media screen and (max-width: 620px) {
 
-.image-container {
-    
-    margin: auto;
-    height: 200px;
-    width: 250px;
-    margin-top: 70px;
+    .image-container {
 
-}
+        margin: auto;
+        height: 200px;
+        width: 250px;
+        margin-top: 70px;
 
-.image-container img {
+    }
 
-    height: 150px;
-    margin: auto;
-    display: block;
-    text-align: center;
-    padding-top: 20px;
-}
+    .image-container img {
 
-
-.alphabet {
-
-    width: 15%;
-    font-size: 30px;
-    padding: 20px;
-    margin: 10px;
-    height: 70px;
+        height: 150px;
+        margin: auto;
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+    }
 
 
-}
+    .alphabet {
+
+        width: 15%;
+        font-size: 30px;
+        margin: 10px;
+        height: 70px;
 
 
-#game-container {
-    
-    width: 100%;
-    height: 950px;
-    margin: auto;
-    
-  
-}
+    }
 
 
-#instructions {
-    font-size: 30px;
-    width: 7%;
-}
+    #game-container {
+
+        width: 100%;
+        height: 950px;
+        margin: auto;
+
+
+    }
+
+
+    #instructions {
+        font-size: 35px;
+        width: 7%;
+        padding: 5px;
+    }
 
 
 }
@@ -557,21 +577,20 @@ body {
 
         width: 15%;
         font-size: 25px;
-        padding: 25px;
-        margin: 15px;
+        margin: 12px;
         height: 60px;
-        
-    
-    
+
+
+
     }
 
-    
+
 
     #sound {
-       
+
         font-size: 25px;
         width: 12%;
-    
+
 
     }
 
@@ -580,12 +599,12 @@ body {
     }
 
     .image-container {
-    
+
         margin: auto;
         height: 200px;
         width: 250px;
         margin-top: 100px;
-    
+
     }
 
     .image-container img {
@@ -596,26 +615,26 @@ body {
         text-align: center;
         padding-top: 20px;
     }
-    
+
 
     #game-container {
-    
+
         width: 100%;
         height: 1200px;
         margin: auto;
-        
-      
+
+
     }
 
     #congratulations {
 
         font-size: 40px;
         margin: 50px;
-        
-    
-    
+
+
+
     }
-    
+
 
 
 }
@@ -624,12 +643,19 @@ body {
 @media screen and (max-width: 380px) {
 
     .image-container {
-    
+
         margin: auto;
         height: 150px;
         width: 200px;
         margin-top: 100px;
-    
+
+    }
+
+    .alphabet {
+        font-size: 30px;
+        height: 55px;
+        width: 20%;
+
     }
 
     #congratulations {
@@ -639,9 +665,9 @@ body {
         padding-bottom: 30px;
         margin: auto;
 
-        
-    
-    
+
+
+
     }
 
     #balloons {

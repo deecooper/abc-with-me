@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+
     <link rel="icon" type="image/png" href="/favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,30 +16,34 @@
     <link rel="stylesheet" href="assests/css/style.css">
     <title>ABC with me</title>
 </head>
+
 <body>
-    <header id = "header-container">
-        <h1 id="logo"><img src="assests/images/logo.png" alt="logo for abc with me"></h1>
-        <!--stackoverflowhttps://stackoverflow.com/questions/18826147/javascript-audio-play-on-click-->
-       
-        <button id="instructions" value="PLAY"> ? 
-           </button>
+    <!--Header with Logo and instructions button-->
+    <header>
+    <div id="header-container">
+
+        <h1 id="logo"><img src="assests/images/logo.png" alt="logo for abc with me">
+        </h1>
+
+        <button id="instructions" value="PLAY"> ?
+        </button>
         
-    
-       </header>
-    
-    <div id= "game-container">
-        <button id = "sound"><i class="fas fa-volume-up"></i>
+</div>
+    </header>
+
+    <div id="game-container">
+        <button id="sound"><i class="fas fa-volume-up"></i>
 
         </button>
 
         <h3 id="score">0</h3>
         <div class="image-container">
             <img src="assests/images/logo.png" id="alphabet-illustration" alt="logo abc with me"></div>
-        
-        <div id ="alphabet-container">
+
+        <div id="alphabet-container">
             <button class="alphabet" id="a-btn"> A </button>
             <button class="alphabet" id="b-btn"> B</button>
-             <button class="alphabet" id="c-btn">C </button>
+            <button class="alphabet" id="c-btn">C </button>
             <button class="alphabet" id="d-btn"> D </button>
             <button class="alphabet" id="e-btn"> E </button>
             <button class="alphabet" id="f-btn"> F </button>
@@ -61,16 +66,17 @@
             <button class="alphabet" id="w-btn"> W </button>
             <button class="alphabet" id="x-btn"> X </button>
             <button class="alphabet" id="y-btn"> Y </button>
-            <button class="alphabet" id="x-btn"> Z </button>
-            
+            <button class="alphabet" id="z-btn"> Z </button>
 
-            
-            
-            
-            </div>
+
+
+
+
+        </div>
 
     </div>
     <a href="game-finished.html">Home</a>
     <script src="assests/js/script.js"></script>
 </body>
+
 </html>

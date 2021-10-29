@@ -1,9 +1,10 @@
+//Global Variables//
 let currentLetter;
 let score = 0;
 let gameComplete = false;
 
 //antonio//
-//an array with an object inside with the illsutrations, audio and answer//
+//An array with an object inside with the illsutrations, audio and answer//
 let illustrations = [{
         'image': "a.png",
         'sound': 'a-is-for.mp3',
@@ -133,16 +134,19 @@ let illustrations = [{
 
 
 ];
-//post on slack so the questions dont repeat themselves kotaro (Toto) Tanaka
 
+
+//Choose illustration function for the random images to show up //
 
 function chooseIllustration(index) {
-    
-    //choosing the random illustration to show up on screen//
-    setTimeout(function(){
-    document.getElementById("alphabet-illustration").src = './assests/images/illustrations/' + illustrations[index].image;
-    currentLetter = illustrations[index];
-    console.log(illustrations);
+
+
+    // Sets a delay of two seconds for illustrations to show//
+
+    setTimeout(function () {
+        document.getElementById("alphabet-illustration").src = './assests/images/illustrations/' + illustrations[index].image;
+        currentLetter = illustrations[index];
+        console.log(illustrations);
     }, 2000);
 
     /// if(!usedIllustrations.includes(illustrations)) {
@@ -156,6 +160,8 @@ function chooseIllustration(index) {
 
 }
 
+//play Audio function//
+
 function playAudio(audioUrl) {
     let audio = new Audio(audioUrl);
     audio.play();
@@ -168,30 +174,31 @@ function playAudio(audioUrl) {
 
 
 
-
+// Listens when the DOM has finished loading and excutes code//
 // code institute love maths//
 document.addEventListener("DOMContentLoaded", function () {
     let instructionsButton = document.getElementById("instructions");
     let audioButton = document.getElementById("sound");
 
-    //return all the buttons from class alphabet used media query
+    //return all the buttons from class alphabet using Query Selector
     let buttonList = document.querySelectorAll('button.alphabet');
 
+    // Sets a time out for buttons when pressed//
     instructionsButton.addEventListener("click", function () {
         let button = this;
         button.disabled = true;
-        setTimeout(function(button){
+        setTimeout(function (button) {
             playAudio('./assests/audio/instructions.mp3');
             button.disabled = false;
 
         }, 2000);
-        
+
     });
 
     audioButton.addEventListener("click", function () {
         let button = this;
         button.disabled = true;
-        setTimeout(function(){
+        setTimeout(function () {
             playAudio('./assests/audio/' + currentLetter.sound);
             button.disabled = false;
         }, 2000);
@@ -202,31 +209,27 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", chooseBtn);
     });
     let randomNum = Math.floor(Math.random() * (illustrations.length));
-//check score is not = 20
+    //check score is not = 20
     chooseIllustration(randomNum);
 
 });
 
 
 
-
-function runGame() {
-    let audio = document.getElementById("audio");
-    audio.play();
-
-}
-
+// Choose Alphabet Button function//
 function chooseBtn() {
 
     let currentOption = this.innerText.toUpperCase();
     if (currentLetter.answer.toUpperCase().includes(currentOption)) {
-        // remove current item from questions
+
         playAudio('./assests/audio/right-ans.mp3');
+        //increment score by one if answered correctly//
         score = score + 1;
         document.getElementById('score').innerText = score;
-        
+
         isGameCompleted();
         //Niall Maher
+        // Remove current item from questions using filter//
         illustrations = illustrations.filter((item) => {
             return item.answer.toUpperCase() !== currentLetter.answer.toUpperCase();
         });
@@ -269,23 +272,23 @@ function chooseBtn() {
 
 */
 
-//score reaches 20 player has completed the game
+//score reaches 20 player has completed the game//
 
 function isGameCompleted() {
     if (score === 5) {
         gameComplete = true;
-        
+
         window.location.replace("game-finished.html");
 
 
-        
+
     }
-   
+
 }
 
 function playAgain() {
     let button = document.getElementById("play-again-btn");
-    button.addEventListener("click", function(){
+    button.addEventListener("click", function () {
         location.href = 'index.html';
     });
 
