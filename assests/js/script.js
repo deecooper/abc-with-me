@@ -275,7 +275,7 @@ function chooseBtn() {
 //score reaches 20 player has completed the game//
 
 function isGameCompleted() {
-    if (score === 5) {
+    if (score === 20) {
         gameComplete = true;
 
         window.location.replace("game-finished.html");
@@ -286,17 +286,3 @@ function isGameCompleted() {
 
 }
 
-function playAgain() {
- 
-    let button = document.getElementById("play-again-btn");
-    button.addEventListener("click", function () {
-        window.location.replace("index.html");
-        console.log(button);
-       // location.reload();
-
-
-    });
-
-}
-
-playAgain();
