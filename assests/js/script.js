@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     instructionsButton.addEventListener("click", function () {
         let button = this;
         button.disabled = true;
-        setTimeout(function (button) {
+        setTimeout(function () {
             playAudio('./assests/audio/instructions.mp3');
             button.disabled = false;
 
@@ -287,9 +287,14 @@ function isGameCompleted() {
 }
 
 function playAgain() {
+ 
     let button = document.getElementById("play-again-btn");
     button.addEventListener("click", function () {
-        location.href = 'index.html';
+        window.location.replace("index.html");
+        console.log(button);
+       // location.reload();
+
+
     });
 
 }
