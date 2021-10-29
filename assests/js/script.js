@@ -3,7 +3,7 @@ let currentLetter;
 let score = 0;
 let gameComplete = false;
 
-//antonio//
+
 //An array with an object inside with the illsutrations, audio and answer//
 let illustrations = [{
         'image': "a.png",
@@ -149,12 +149,7 @@ function chooseIllustration(index) {
         console.log(illustrations);
     }, 2000);
 
-    /// if(!usedIllustrations.includes(illustrations)) {
-    //    console.log(illustrations);
-    //   illustrations.push(usedIllustrations);
-    //   } else {
-    //       chooseIllustration();
-    //  }*/
+   
 
 
 
@@ -175,7 +170,7 @@ function playAudio(audioUrl) {
 
 
 // Listens when the DOM has finished loading and excutes code//
-// code institute love maths//
+
 document.addEventListener("DOMContentLoaded", function () {
     let instructionsButton = document.getElementById("instructions");
     let audioButton = document.getElementById("sound");
@@ -228,7 +223,7 @@ function chooseBtn() {
         document.getElementById('score').innerText = score;
 
         isGameCompleted();
-        //Niall Maher
+        
         // Remove current item from questions using filter//
         illustrations = illustrations.filter((item) => {
             return item.answer.toUpperCase() !== currentLetter.answer.toUpperCase();
@@ -244,33 +239,6 @@ function chooseBtn() {
 
 }
 
-//create a timeout for the buttons after being clicked
-//https://stackoverflow.com/questions/30634542/adding-a-timed-delay-after-pressing-a-button-to-prevent-button-spam/30634772
-
-
-/*function timeOutBtns() {
-    let btns = document.getElementsByTagName("button");
-
-
-    for (let i = 0; i < btns.length; i++) {
-        btns[i].addEventListener('click', function () {
-            disableButtons(true);
-            setTimeout(function () {
-                disableButtons(false);
-            }, 6000);
-        });
-    }
-
-    function disableButtons(state) {
-        for (let i = 0; i < btns.length; i++) {
-            btns[i].disabled = !!state;
-        }
-
-    }
-
-}
-
-*/
 
 //score reaches 20 player has completed the game//
 
